@@ -10,7 +10,6 @@ app.listen(3000, () => {
 });
 
 
-// G E T   A   P R O D U C T 
 app.get("/", (req, res) => {
   res.send("Hello from Node API 💗👩🏽‍💻"); // response renders on localhost:3000
 });
@@ -23,7 +22,18 @@ app.post('/api/products', async (req, res) => {
     } catch (error) {
         res.status(500).json({messsage: error.messsage})
     }
-})
+});
+
+
+// G E T   A L L   P R O D U C T 
+app.get("/api/products", async (req, res) => {
+   try {
+     const products = await Product.find({})
+     res.status(200).json({products})
+   } catch (error) {
+    res.status(500).json({message: error.message})
+   }
+  });
 
 //  C O N N E C T I N G    O U R    D B
 
