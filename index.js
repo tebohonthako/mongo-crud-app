@@ -6,5 +6,5 @@ app.listen(3000, () => {
 });
 
 app.get('/', (req, res) => {
-    res.send("Hello from Node API")    // response renders on localhost:3000
+    res.send("Hello from Node API 💗👩🏽‍💻")    // response renders on localhost:3000
 })
