@@ -10,6 +10,12 @@ app.get("/", (req, res) => {
   res.send("Hello from Node API 💗👩🏽‍💻"); // response renders on localhost:3000
 });
 
+
+app.post('/api/products', (req, res) => {
+    console.log(req.body);
+    res.send(req.body);
+})
+
 //  C O N N E C T I N G    O U R    D B
 
 // This code connects your application to a MongoDB database using Mongoose.
